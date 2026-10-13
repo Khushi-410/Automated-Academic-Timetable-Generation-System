@@ -1,0 +1,199 @@
+{
+  "config": {
+    "university": {
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "workingDays": [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday"
+      ],
+      "periodDurationMinutes": 60,
+      "breaks": [
+        {
+          "startTime": "12:00",
+          "endTime": "13:00"
+        }
+      ]
+    },
+    "rooms": [
+      {
+        "id": "room-101",
+        "name": "Classroom 101",
+        "type": "classroom",
+        "capacity": 40,
+        "labType": null,
+        "availability": [
+          {
+            "startTime": "09:00",
+            "endTime": "16:00",
+            "day": "monday"
+          },
+          {
+            "startTime": "09:00",
+            "endTime": "16:00",
+            "day": "tuesday"
+          },
+          {
+            "startTime": "09:00",
+            "endTime": "16:00",
+            "day": "wednesday"
+          },
+          {
+            "startTime": "09:00",
+            "endTime": "16:00",
+            "day": "thursday"
+          },
+          {
+            "startTime": "09:00",
+            "endTime": "16:00",
+            "day": "friday"
+          }
+        ]
+      },
+      {
+        "id": "lab-dfis",
+        "name": "Digital Forensics Lab",
+        "type": "laboratory",
+        "capacity": 20,
+        "labType": "digital-forensics",
+        "availability": [
+          {
+            "startTime": "09:00",
+            "endTime": "16:00",
+            "day": "monday"
+          },
+          {
+            "startTime": "09:00",
+            "endTime": "16:00",
+            "day": "tuesday"
+          },
+          {
+            "startTime": "09:00",
+            "endTime": "16:00",
+            "day": "wednesday"
+          },
+          {
+            "startTime": "09:00",
+            "endTime": "16:00",
+            "day": "thursday"
+          },
+          {
+            "startTime": "09:00",
+            "endTime": "16:00",
+            "day": "friday"
+          }
+        ]
+      }
+    ],
+    "faculty": [
+      {
+        "id": "faculty-theory",
+        "name": "Dr. Asha Demo",
+        "availability": [
+          {
+            "startTime": "09:00",
+            "endTime": "11:00",
+            "day": "monday"
+          }
+        ],
+        "unavailableSlots": [],
+        "maxDailyPeriods": 4
+      },
+      {
+        "id": "faculty-practical",
+        "name": "Dr. Ravi Demo",
+        "availability": [
+          {
+            "startTime": "09:00",
+            "endTime": "16:00",
+            "day": "monday"
+          },
+          {
+            "startTime": "09:00",
+            "endTime": "16:00",
+            "day": "tuesday"
+          },
+          {
+            "startTime": "09:00",
+            "endTime": "16:00",
+            "day": "wednesday"
+          },
+          {
+            "startTime": "09:00",
+            "endTime": "16:00",
+            "day": "thursday"
+          },
+          {
+            "startTime": "09:00",
+            "endTime": "16:00",
+            "day": "friday"
+          }
+        ],
+        "unavailableSlots": [],
+        "maxDailyPeriods": 4
+      }
+    ],
+    "studentGroups": [
+      {
+        "id": "dfis-sem1-a",
+        "programme": "M.Sc. DFIS",
+        "semester": 1,
+        "section": "A",
+        "strength": 40,
+        "maxDailyPeriods": null
+      }
+    ],
+    "batches": [
+      {
+        "id": "dfis-batch-a",
+        "name": "Batch A",
+        "studentGroupId": "dfis-sem1-a",
+        "strength": 20
+      },
+      {
+        "id": "dfis-batch-b",
+        "name": "Batch B",
+        "studentGroupId": "dfis-sem1-a",
+        "strength": 20
+      }
+    ],
+    "teachingRequirements": [
+      {
+        "id": "req-dfis103-theory",
+        "subjectCode": "DFIS103",
+        "subjectName": "Digital Forensics Fundamentals",
+        "studentGroupId": "dfis-sem1-a",
+        "kind": "theory",
+        "facultyId": "faculty-theory",
+        "periodsPerWeek": 3,
+        "sessionsPerWeek": null,
+        "durationPeriods": 1,
+        "batchIds": [],
+        "requiredLabType": null,
+        "preferredSlots": []
+      },
+      {
+        "id": "req-dfis103-practical",
+        "subjectCode": "DFIS103P",
+        "subjectName": "Digital Forensics Practical",
+        "studentGroupId": "dfis-sem1-a",
+        "kind": "practical",
+        "facultyId": "faculty-practical",
+        "periodsPerWeek": null,
+        "sessionsPerWeek": 1,
+        "durationPeriods": 2,
+        "batchIds": [
+          "dfis-batch-a",
+          "dfis-batch-b"
+        ],
+        "requiredLabType": "digital-forensics",
+        "preferredSlots": []
+      }
+    ],
+    "fixedCommitments": []
+  },
+  "lockedSessions": []
+}
